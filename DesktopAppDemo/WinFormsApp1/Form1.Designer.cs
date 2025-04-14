@@ -44,6 +44,7 @@
             richTextBox1 = new RichTextBox();
             textBox1 = new TextBox();
             timer1 = new System.Windows.Forms.Timer(components);
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -86,6 +87,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(240, 150);
             dataGridView1.TabIndex = 3;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // dateTimePicker1
             // 
@@ -105,6 +107,7 @@
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
+            groupBox1.Enter += groupBox1_Enter;
             groupBox1.MouseHover += groupBox1_MouseHover;
             // 
             // label1
@@ -131,6 +134,7 @@
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(100, 23);
             maskedTextBox1.TabIndex = 8;
+            maskedTextBox1.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
             // tabControl1
             // 
@@ -177,11 +181,22 @@
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 11;
             // 
+            // button2
+            // 
+            button2.Location = new Point(80, 56);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 12;
+            button2.Text = "Close";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(textBox1);
             Controls.Add(richTextBox1);
             Controls.Add(tabControl1);
@@ -219,5 +234,6 @@
         private RichTextBox richTextBox1;
         private TextBox textBox1;
         private System.Windows.Forms.Timer timer1;
+        private Button button2;
     }
 }
