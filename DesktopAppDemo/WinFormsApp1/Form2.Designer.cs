@@ -54,6 +54,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(800, 266);
             dataGridView1.TabIndex = 0;
+            dataGridView1.TabStop = false;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnShow
@@ -62,6 +63,7 @@
             btnShow.Name = "btnShow";
             btnShow.Size = new Size(75, 23);
             btnShow.TabIndex = 1;
+            btnShow.TabStop = false;
             btnShow.Text = "Göster";
             btnShow.UseVisualStyleBackColor = true;
             btnShow.Click += btnShow_Click;
@@ -72,6 +74,7 @@
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(75, 23);
             btnClose.TabIndex = 2;
+            btnClose.TabStop = false;
             btnClose.Text = "Kapat";
             btnClose.UseVisualStyleBackColor = true;
             btnClose.Click += btnClose_Click;
@@ -91,6 +94,7 @@
             txtId.Name = "txtId";
             txtId.Size = new Size(100, 23);
             txtId.TabIndex = 0;
+            txtId.TextChanged += txtId_TextChanged;
             // 
             // txtProduct
             // 
@@ -114,6 +118,7 @@
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(100, 23);
             txtQuantity.TabIndex = 3;
+            txtQuantity.TextChanged += txtQuantity_TextChanged;
             // 
             // label3
             // 
@@ -129,7 +134,7 @@
             btnSave.Location = new Point(374, 149);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
-            btnSave.TabIndex = 9;
+            btnSave.TabIndex = 4;
             btnSave.Text = "Kayıt";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
